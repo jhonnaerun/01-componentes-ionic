@@ -101,9 +101,15 @@
         "path": "/segment"
     },
     {
-        "icon": "tablet-portrait-sharp",
+        "icon": "enter",
         "color": "dark",
         "name": "Slide",
         "path": "/slide"
+    },
+    {
+        "icon": "tablet-portrait-sharp",
+        "color": "xbox",
+        "name": "Tabs",
+        "path": "/tabs/home"
     }
 ]

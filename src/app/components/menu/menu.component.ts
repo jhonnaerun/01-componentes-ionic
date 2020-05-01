@@ -17,6 +17,9 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {}
 
+  /**
+   *  Servicio para obtener el menu
+   */
   getListMenu() {
     this.dataServices.getListOption().subscribe((data: any) => {
       this.listItem = data;

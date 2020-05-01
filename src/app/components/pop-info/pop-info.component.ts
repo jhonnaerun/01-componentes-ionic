@@ -13,6 +13,9 @@ export class PopInfoComponent implements OnInit {
 
   ngOnInit() {}
 
+  /**
+   * cierra el popover
+   */
   itemSelect(item) {
     this.popCtrl.dismiss({
       item

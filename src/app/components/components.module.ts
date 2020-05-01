@@ -7,7 +7,9 @@ import { RouterModule } from '@angular/router';
 import { PopInfoComponent } from './pop-info/pop-info.component';
 
 
-
+/**
+ *  siempre se declara,importa y exporta el componente
+ */
 @NgModule({
   declarations: [HeaderComponent, MenuComponent, PopInfoComponent],
   imports: [

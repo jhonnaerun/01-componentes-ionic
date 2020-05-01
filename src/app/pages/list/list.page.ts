@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DataService } from '../../services/data.service';
-import { IonList, AlertController, LoadingController } from '@ionic/angular';
+import { IonList, AlertController, LoadingController, ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-list',
@@ -17,7 +17,8 @@ export class ListPage implements OnInit {
 
   constructor(private dataService: DataService,
               private alertController: AlertController,
-              private loadingController: LoadingController) {
+              private loadingController: LoadingController,
+              public toastController: ToastController) {
     this.titulo = 'List - Sliding';
     this.backButton = true;
     this.estadoRed = true;
@@ -63,6 +64,12 @@ export class ListPage implements OnInit {
 
   detailUser(user) {
     console.log('datos del usuario seleccionado', user);
+    this.presentToast(user.name);
+  }
+
+  trashClick() {
+    console.log('trash');
+    this.presentToastWithOptions();
   }
 
   reorder(event) {
@@ -70,6 +77,32 @@ export class ListPage implements OnInit {
     const itemMover = this.users.splice(event.detail.from, 1)[0];
     this.users.splice(event.detail.to, 0, itemMover);
     event.detail.complete();
+  }
+
+  async presentToast(name) {
+    const toast = await this.toastController.create({
+      message: 'seleccionaste información de' + name,
+      duration: 2000
+    });
+    toast.present();
+  }
+
+  async presentToastWithOptions() {
+    const toast = await this.toastController.create({
+      message: 'Eliminado',
+      position: 'top',
+      buttons: [
+        {
+          side: 'start',
+          icon: 'trash',
+          handler: () => {
+            console.log('Favorite clicked');
+          }
+        }
+      ],
+      duration: 2000
+    });
+    toast.present();
   }
 
 }

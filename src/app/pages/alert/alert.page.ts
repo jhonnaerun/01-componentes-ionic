@@ -18,6 +18,9 @@ export class AlertPage implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * alert 1
+   */
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Alert',
@@ -28,6 +31,9 @@ export class AlertPage implements OnInit {
     await alert.present();
   }
 
+  /**
+   * alert 2-botones
+   */
   async presentAlertMultipleButtons() {
     const alert = await this.alertController.create({
       header: 'Alert',
@@ -38,6 +44,9 @@ export class AlertPage implements OnInit {
     await alert.present();
   }
 
+  /**
+   * alert 3-funcion a los botones
+   */
   async presentAlertConfirm() {
     const alert = await this.alertController.create({
       header: 'Confirm!',
@@ -61,6 +70,9 @@ export class AlertPage implements OnInit {
     await alert.present();
   }
 
+  /**
+   * alert 4-inputs
+   */
   async presentAlertPrompt() {
     const alert = await this.alertController.create({
       header: 'Prompt!',
@@ -132,6 +144,9 @@ export class AlertPage implements OnInit {
     await alert.present();
   }
 
+  /**
+   * alert 5-radio
+   */
   async presentAlertRadio() {
     const alert = await this.alertController.create({
       header: 'Radio',
@@ -193,6 +208,9 @@ export class AlertPage implements OnInit {
     await alert.present();
   }
 
+  /**
+   * alert 6-checkbox
+   */
   async presentAlertCheckbox() {
     const alert = await this.alertController.create({
       header: 'Checkbox',
@@ -254,6 +272,9 @@ export class AlertPage implements OnInit {
     await alert.present();
   }
 
+  /**
+   * alert 7-input cambiar nombre
+   */
   async presentAlertName() {
     const alert = await this.alertController.create({
       header: 'Cambio de Nombre',
