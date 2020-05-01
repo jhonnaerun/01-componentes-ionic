@@ -14,6 +14,9 @@ export class PopoverPage implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * funcion que crea el ion-popover
+   */
   async presentPopover(event: any) {
     const popover = await this.popoverController.create({
       component: PopInfoComponent,

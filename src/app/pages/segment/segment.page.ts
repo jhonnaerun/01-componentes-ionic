@@ -22,6 +22,9 @@ export class SegmentPage implements OnInit {
     this.getSuperHeroes();
   }
 
+  /**
+   * consume el servicio getSuperHeroes
+   */
   getSuperHeroes() {
     this.dataServices.getSuperHeroes().subscribe((data: any) => {
       console.log(data);
@@ -29,6 +32,9 @@ export class SegmentPage implements OnInit {
     });
   }
 
+  /**
+   * cambio de segmento para enviar al pipe
+   */
   segmentChanged(event) {
     this.segmento = event.detail.value;
     if (this.segmento === 'Todos') {

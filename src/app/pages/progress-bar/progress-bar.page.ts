@@ -18,6 +18,9 @@ export class ProgressBarPage implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * cambia el porcentaje para manejo del progress-bar, que funciona con valores de 0 a 1w
+   */
   cambioRange(event) {
     this.porcentaje = event.detail.value / 100;
   }

@@ -26,9 +26,9 @@ export class ListPage implements OnInit {
 
   ngOnInit() {
     this.presentLoading();
+    // llamado servicio para cosultar la data
     this.dataService.dataUser().subscribe(data => {
       this.users = data;
-      console.log('data services', data);
       this.estadoRed = true;
       this.presentLoadingClose();
       this.presentAlert();
@@ -39,6 +39,9 @@ export class ListPage implements OnInit {
     });
   }
 
+  /**
+   * metodo que muestra un alert
+   */
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Atención',
@@ -49,6 +52,9 @@ export class ListPage implements OnInit {
     await alert.present();
   }
 
+  /**
+   * funcion que carga el loading
+   */
   async presentLoading() {
     this.loading = await this.loadingController.create({
       message: 'Cargando Datos...',
@@ -56,22 +62,34 @@ export class ListPage implements OnInit {
     return this.loading.present();
   }
 
+  /**
+   * funcion cierra el loading
+   */
   presentLoadingClose() {
     setTimeout(() => {
       this.loading.dismiss();
     }, 500);
   }
 
+  /**
+   * funcion detalle del usuario seleccionado
+   */
   detailUser(user) {
     console.log('datos del usuario seleccionado', user);
     this.presentToast(user.name);
   }
 
+  /**
+   * funcion que boton eliminar, que implementa un ion-toast
+   */
   trashClick() {
     console.log('trash');
     this.presentToastWithOptions();
   }
 
+  /**
+   * metodo que implementa el ion-reorder
+   */
   reorder(event) {
     console.log(event);
     const itemMover = this.users.splice(event.detail.from, 1)[0];
@@ -79,6 +97,9 @@ export class ListPage implements OnInit {
     event.detail.complete();
   }
 
+  /**
+   * funcion que crea el ion-toast
+   */
   async presentToast(name) {
     const toast = await this.toastController.create({
       message: 'seleccionaste información de' + name,
@@ -87,6 +108,9 @@ export class ListPage implements OnInit {
     toast.present();
   }
 
+  /**
+   * funcion que crea un ion-toast con icono y funcionalidad
+   */
   async presentToastWithOptions() {
     const toast = await this.toastController.create({
       message: 'Eliminado',

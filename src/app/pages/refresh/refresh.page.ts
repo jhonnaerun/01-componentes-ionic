@@ -18,6 +18,9 @@ export class RefreshPage implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * fucion que implemneta el ion-refresh
+   */
   refresh(event) {
     console.log(this.items);
     setTimeout(() => {

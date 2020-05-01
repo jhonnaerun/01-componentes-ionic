@@ -3,6 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { TabsPage } from './tabs.page';
 
+/**
+ * en el ion-tab se implementas las rutas de navegacion de cada tab y la inicial
+ */
 const routes: Routes = [
   {
     path: 'tab-home',

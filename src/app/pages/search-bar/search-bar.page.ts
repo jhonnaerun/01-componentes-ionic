@@ -26,6 +26,9 @@ export class SearchBarPage implements OnInit {
     this.busqueda = event.detail.value;
   }
 
+  /**
+   * funcion que consume el servicio data albums
+   */
   cargarAlbums() {
     this.dataServices.dataAlbums().subscribe((data: any) => {
       this.albums = data;

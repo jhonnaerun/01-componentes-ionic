@@ -9,6 +9,8 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
+ /* METODOS QUE CONSUMEN SERVICIOS LOCALES COMO LLAMAR LA INFO DE UN JSON O UN OBERVABLE WEB*/
+
   dataUser() {
     return this.http.get('https://jsonplaceholder.typicode.com/users');
   }

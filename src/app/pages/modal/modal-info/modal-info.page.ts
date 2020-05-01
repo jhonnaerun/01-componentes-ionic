@@ -14,6 +14,9 @@ export class ModalInfoPage implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * funcion que envia datos al modal padre
+   */
   salirConArgumentos() {
     this.modalCtrl.dismiss({
       nombre: this.name + ' validado',
@@ -21,6 +24,9 @@ export class ModalInfoPage implements OnInit {
     });
   }
 
+  /**
+   * cierra el modal
+   */
   salirModal() {
     this.modalCtrl.dismiss();
   }

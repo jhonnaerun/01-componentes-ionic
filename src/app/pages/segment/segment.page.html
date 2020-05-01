@@ -37,6 +37,7 @@
     </ion-list>
 
     <ion-list *ngIf="heros.length != 0">
+        <!--implementa pipe filtro para manejo del aaray-->
         <ion-item *ngFor="let hero of heros |filtro: segmento: 'publisher'" class="animated fadeIn fast">
             <ion-label>
                 <h4>{{hero.superhero}} <small> {{hero.alter_ego}}</small></h4>

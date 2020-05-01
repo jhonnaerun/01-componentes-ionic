@@ -21,6 +21,9 @@ export class InfiniteScrollPage implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * funcion infinite scroll
+   */
   loadData(event) {
     setTimeout(() => {
       if ( this.items.length < 60) {

@@ -22,6 +22,9 @@ export class ModalPage implements OnInit {
   ngOnInit() {
   }
 
+  /**
+   * funcion crea el ion-modal
+   */
    async abrirModal() {
     const modal = await this.modalCtrl.create({
       component: ModalInfoPage,
@@ -37,6 +40,9 @@ export class ModalPage implements OnInit {
     this.initCampos();
   }
 
+  /**
+   * inicializa los campos
+   */
   initCampos() {
     this.nombre = '';
     this.telefono = '';

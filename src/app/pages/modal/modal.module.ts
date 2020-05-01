@@ -11,6 +11,9 @@ import { ComponentsModule } from '../../components/components.module';
 import { ModalInfoPage } from './modal-info/modal-info.page';
 import { ModalInfoPageModule } from './modal-info/modal-info.module';
 
+/**
+ * Declara el modalInfoPage como componente de entrada
+ */
 @NgModule({
   entryComponents: [ModalInfoPage],
   imports: [

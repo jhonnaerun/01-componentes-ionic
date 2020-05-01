@@ -10,6 +10,9 @@ import { PopoverPage } from './popover.page';
 import { ComponentsModule } from '../../components/components.module';
 import { PopInfoComponent } from '../../components/pop-info/pop-info.component';
 
+/**
+ * en entry components se agrega el compoente pop-info
+ */
 @NgModule({
   entryComponents: [PopInfoComponent],
   imports: [
