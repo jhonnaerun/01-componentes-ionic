@@ -1,0 +1,41 @@
+<app-header titulo="Fab Button" [backButton]="backButton"></app-header>
+
+<ion-content>
+    <ion-fab vertical="center" horizontal="center" slot="fixed">
+        <ion-fab-button>
+            <ion-icon name="share"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-list side="top">
+            <ion-fab-button>
+                <ion-icon name="logo-vimeo" color="vimeo" (click)="onCLick('vimeo')"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button>
+                <ion-icon name="logo-youtube" color="youtube" (click)="onCLick('youtube')"></ion-icon>
+            </ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="bottom">
+            <ion-fab-button>
+                <ion-icon name="logo-facebook" color="facebook" (click)="onCLick('facebook')"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button>
+                <ion-icon name="logo-twitter" color="twitter" (click)="onCLick('twitter')"></ion-icon>
+            </ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="start">
+            <ion-fab-button>
+                <ion-icon name="logo-playstation" color="playstation" (click)="onCLick('playstation')"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button>
+                <ion-icon name="logo-xbox" color="xbox" (click)="onCLick('xbox')"></ion-icon>
+            </ion-fab-button>
+        </ion-fab-list>
+        <ion-fab-list side="end">
+            <ion-fab-button>
+                <ion-icon name="logo-whatsapp" color="whatsapp" (click)="onCLick('whastapp')"></ion-icon>
+            </ion-fab-button>
+            <ion-fab-button>
+                <ion-icon name="logo-chrome" color="chrome" (click)="onCLick('chrome')"></ion-icon>
+            </ion-fab-button>
+        </ion-fab-list>
+    </ion-fab>
+</ion-content>

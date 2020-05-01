@@ -1,0 +1,20 @@
+<app-header [titulo]="titulo" [backButton]="backButton"></app-header>
+
+<ion-content>
+    <ion-list style="margin-top: 1cm;">
+        <ion-list-header>
+            <ion-label>Datos de Nacimiento</ion-label>
+        </ion-list-header>
+        <ion-item>
+            <ion-label position="floating">Fecha de Nacimiento</ion-label>
+            <ion-datetime mode="ios" value="{{date}}" display-format="YYYY MMMM DD" [ngModel]="date" (ionChange)="cambioFecha($event)"></ion-datetime>
+        </ion-item>
+        <ion-list-header>
+            <ion-label>Date Time</ion-label>
+        </ion-list-header>
+        <ion-item>
+            <ion-label>date time</ion-label>
+            <ion-datetime mode="ios" min="2019-01-01" display-format="YYYY MMMM DD" [pickerOptions]="customPickerOptions" value={{customDate}} [ngModel]="customDate"></ion-datetime>
+        </ion-item>
+    </ion-list>
+</ion-content>

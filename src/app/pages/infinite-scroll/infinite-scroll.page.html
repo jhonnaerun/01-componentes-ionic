@@ -1,0 +1,16 @@
+<app-header [backButton]="backButton" [titulo]="titulo"></app-header>
+
+<ion-content>
+    <ion-list style="margin-top: 0.5cm;">
+        <ion-item *ngFor="let item of items, let i = index">
+            <ion-avatar slot="start">
+                <img src="/assets/img/bat.jpg" alt="">
+            </ion-avatar>
+            <ion-label> Item {{i + 1}}</ion-label>
+        </ion-item>
+    </ion-list>
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+        <ion-infinite-scroll-content loadingSpinner="crescent" loadingText="Cargando...">
+        </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

@@ -1,0 +1,13 @@
+<app-header [titulo]="titulo" [backButton]="backButton"></app-header>
+
+<ion-content>
+    <ion-searchbar (ionChange)="buscar($event)" animated></ion-searchbar>
+    <ion-list class="ion-padding">
+        <ion-item *ngFor="let album of albums | filtro: busqueda: 'title'">
+            <h4 *ngIf="albums.length != 0">
+                <ion-label>id : {{album.id}}</ion-label>
+                <ion-label>{{album.title}}</ion-label>
+            </h4>
+        </ion-item>
+    </ion-list>
+</ion-content>

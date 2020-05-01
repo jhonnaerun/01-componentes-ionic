@@ -1,0 +1,10 @@
+<p class="ion-padding">
+    Toque el boton o los iconos para obtener información!
+</p>
+<ion-list>
+    <ion-item *ngFor="let item of items; let i = index" (click)="itemSelect(i)" detail>
+        <ion-label>
+            Item {{i + 1}}
+        </ion-label>
+    </ion-item>
+</ion-list>

@@ -1,0 +1,11 @@
+<ion-header class="ion-no-border" translucent="true">
+    <ion-toolbar>
+        <ion-buttons slot="start" *ngIf="backButton">
+            <ion-back-button defaultHref="/home" icon="chevron-back" text="Back"></ion-back-button>
+        </ion-buttons>
+        <ion-title class="ion-text-capitalize ion-text-center">{{titulo}}</ion-title>
+        <ion-buttons slot="end">
+            <ion-menu-button menu="menuApp"></ion-menu-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>

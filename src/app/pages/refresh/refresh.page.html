@@ -1,0 +1,13 @@
+<app-header [titulo]="titulo" [backButton]="backButton"></app-header>
+
+<ion-content>
+    <ion-refresher slot="fixed" (ionRefresh)="refresh($event)">
+        <ion-refresher-content refreshingSpinner="bubbles"></ion-refresher-content>
+    </ion-refresher>
+    <h1 *ngIf="items.length == 0" class="ion-text-center animated fadeIn fast">Arratastra hacia abajo para refrescar</h1>
+    <ion-list class="animated fadeIn fast">
+        <ion-item *ngFor="let item of items; let i = index">
+            <ion-label>Item {{i + 1}}</ion-label>
+        </ion-item>
+    </ion-list>
+</ion-content>

@@ -1,0 +1,103 @@
+[{
+        "icon": "alert-circle",
+        "color": "primary",
+        "name": "Alert",
+        "path": "/alert"
+    },
+    {
+        "icon": "document-text",
+        "color": "secondary",
+        "name": "Action-Sheet",
+        "path": "/action-sheet"
+    },
+    {
+        "icon": "person",
+        "color": "tertiary",
+        "name": "Avatar",
+        "path": "/avatar"
+    },
+    {
+        "icon": "browsers",
+        "color": "success",
+        "name": "Cards",
+        "path": "/card"
+    },
+    {
+        "icon": "checkmark-circle",
+        "color": "warning",
+        "name": "CheckBox",
+        "path": "/checkbox"
+    },
+    {
+        "icon": "calendar",
+        "color": "danger",
+        "name": "Date Time",
+        "path": "/date-time"
+    },
+    {
+        "icon": "add-circle",
+        "color": "dark",
+        "name": "Fab Buttons",
+        "path": "/fab"
+    },
+    {
+        "icon": "grid",
+        "color": "medium",
+        "name": "Grid",
+        "path": "/grid"
+    },
+    {
+        "icon": "infinite",
+        "color": "twitter",
+        "name": "Infinite Scroll",
+        "path": "/infinite-scroll"
+    },
+    {
+        "icon": "reorder-two",
+        "color": "facebook",
+        "name": "Inputs",
+        "path": "/input"
+    },
+    {
+        "icon": "list",
+        "color": "playstation",
+        "name": "List-sliding",
+        "path": "/list"
+    },
+    {
+        "icon": "duplicate",
+        "color": "primary",
+        "name": "Modal",
+        "path": "/modal"
+    },
+    {
+        "icon": "tablet-portrait",
+        "color": "secondary",
+        "name": "Popover",
+        "path": "/popover"
+    },
+    {
+        "icon": "options-outline",
+        "color": "tertiary",
+        "name": "Progress Bar",
+        "path": "/progress-bar"
+    },
+    {
+        "icon": "arrow-redo-circle-outline",
+        "color": "primary",
+        "name": "Refresh",
+        "path": "/refresh"
+    },
+    {
+        "icon": "phone-landscape-sharp",
+        "color": "medium",
+        "name": "Search Bar",
+        "path": "/search-bar"
+    },
+    {
+        "icon": "layers",
+        "color": "youtube",
+        "name": "Segment",
+        "path": "/segment"
+    }
+]

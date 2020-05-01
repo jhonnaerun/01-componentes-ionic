@@ -1,0 +1,23 @@
+<ion-menu side="end" menuId="menuApp" contentId="main">
+    <ion-header>
+        <ion-toolbar color="dark">
+            <ion-title>Menu</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <ion-menu-toggle>
+                <ion-item routerLink="/home" detail>
+                    <ion-icon name="home" slot="start" color="dark"></ion-icon>
+                    <ion-label>Home</ion-label>
+                </ion-item>
+            </ion-menu-toggle>
+            <ion-menu-toggle *ngFor="let item of listItem">
+                <ion-item [routerLink]="item.path" detail>
+                    <ion-icon [name]="item.icon" slot="start" [color]="item.color"></ion-icon>
+                    <ion-label>{{item.name}}</ion-label>
+                </ion-item>
+            </ion-menu-toggle>
+        </ion-list>
+    </ion-content>
+</ion-menu>

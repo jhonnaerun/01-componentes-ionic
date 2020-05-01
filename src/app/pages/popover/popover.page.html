@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/home" icon="chevron-back" text="Back"></ion-back-button>
+        </ion-buttons>
+        <ion-title class="ion-text-center">popover</ion-title>
+        <ion-buttons slot="end" (click)="presentPopover($event)">
+            <ion-icon name="person" slot="icon-only"></ion-icon>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <ion-button expand="full" style="margin-top: 5cm;" color="primary" (click)="presentPopover($event)">
+        <ion-icon name="person" slot="icon-only"></ion-icon>
+        <ion-label>Popover</ion-label>
+    </ion-button>
+</ion-content>
+
+<ion-footer>
+    <ion-toolbar>
+        <ion-title class="ion-text-center">popover</ion-title>
+        <ion-buttons slot="start" (click)="presentPopover($event)">
+            <ion-icon name="person" slot="icon-only"></ion-icon>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-footer>
